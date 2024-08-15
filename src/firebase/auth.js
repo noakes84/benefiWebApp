@@ -42,3 +42,11 @@ export const doSendEmailVerification = () => {
     url: `${window.location.origin}/home`,
   });
 };
+
+export const doSendPasswordResetEmail = async (email) => {
+  try {
+      await sendPasswordResetEmail(auth, email)
+  } catch (error) {
+      throw error
+  }
+}

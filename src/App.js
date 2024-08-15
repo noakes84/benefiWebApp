@@ -4,6 +4,15 @@ import Register from "./components/auth/register";
 import Header from "./components/header";
 import Home from "./components/home";
 
+import Forms from "./components/forms"
+import Notifications from "./components/notifications"
+
+import Enrollments from "./components/enrollment";
+import Calls from "./components/calls";
+
+import Faqs from "./components/faqs";
+
+
 import { AuthProvider } from "./contexts/authContext";
 import { useRoutes } from "react-router-dom";
 
@@ -25,6 +34,26 @@ function App() {
       path: "/home",
       element: <Home />,
     },
+    {
+      path: "/forms",
+      element: <Forms />
+    },
+    {
+      path: "/notifications",
+      element: <Notifications />
+    },
+    {
+      path: "/enrollments",
+      element: <Enrollments />
+    },
+    {
+      path: "/calls",
+      element: <Calls />
+    },
+    {
+      path: "/faqs",
+      element: <Faqs />
+    }
   ];
   let routesElement = useRoutes(routesArray);
   return (
